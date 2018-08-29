@@ -7,4 +7,8 @@ node{
      def mvnHome =tool name: 'mvn', type: 'maven'
     sh "${mvnHome}/bin/mvn test"
   }
+  stage('Compile&Package'){
+     def mvnHome =tool name: 'mvn', type: 'maven'
+    sh "${mvnHome}/bin/mvn package"
+  }
 }
