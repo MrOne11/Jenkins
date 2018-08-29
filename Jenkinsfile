@@ -3,6 +3,6 @@ node{
     git 'https://github.com/MrOne11/Jenkins'
   }
   stage('Test'){
-    sh 'mvn package'
+    sh 'mvn test'
   }
 }
