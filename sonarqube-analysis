@@ -13,12 +13,7 @@ node{
     sh "${mvnHome}/bin/mvn package"
   }
   
-  stage('SonarQube Analysis'){
-    def mvnHome =tool name: 'mvn', type: 'maven'
-    withSonarQubeEnv('sonar-6'){
-      sh "${mvnHome}/bin/mvn sonar:sonar"
-    }
-  }
+
   
   stage('Email notification'){
     mail bcc: '', body: '''Hi Welcome to jenkins email alerts
