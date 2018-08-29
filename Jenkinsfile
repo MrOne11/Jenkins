@@ -16,4 +16,14 @@ node{
 Thanks
 Marouane''', cc: '', from: '', replyTo: '', subject: 'Jenkins job', to: 'marouane.abdell@gmail.com'
   }
+  
+  stage('Slack Notification'){
+    slackSend baseUrl: 'https://hooks.slack.com/services/', 
+      channel: 'jenkins-demo-pipeline', color: 'good',
+      message: 'Welcome to Jenkins Pipeline',
+      teamDomain: 'Abdellah', 
+      tokenCredentialId: 'slack-demo'
+
+  }
+  
 }
