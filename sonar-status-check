@@ -24,8 +24,8 @@ node{
           timeout(time: 1, unit: 'HOURS') {
               def qg = waitForQualityGate()
               if (qg.status != 'OK') {
-                  slackSend baseUrl: 'https://hooks.slack.com/services/', 
-                  channel: '#jenkins-demo-pipeline',
+                 slackSend baseUrl: 'https://hooks.slack.com/services/', 
+                  channel: 'jenkins-demo-pipeline',
                   color: 'danger',
                   message: 'SonarQube Analysis Failed',
                   teamDomain: 'Abdellah', 
