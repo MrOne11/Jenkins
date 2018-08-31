@@ -20,7 +20,7 @@ node{
         }
     }
   
-  stage("Quality Gate Status Check"){
+/*  stage("Quality Gate Status Check"){
           timeout(time: 1, unit: 'HOURS') {
               def qg = waitForQualityGate()
               if (qg.status != 'OK') {
@@ -33,7 +33,7 @@ node{
                   error "Pipeline aborted due to quality gate failure: ${qg.status}"
               }
           }
-      }
+      }*/
   stage('Email notification'){
     mail bcc: '', body: '''Hi Welcome to jenkins email alerts
     Thankss
